@@ -15,11 +15,14 @@
                 <h1 class="h4 mb-0">Campo Minato</h1>
             </div>
             <div class="d-flex align-items-center">
+                <div id="score-container" class="me-4">
+                    <span>Score: </span><span id="score">0</span>
+                </div>
                 <label for="difficulty" class="form-label me-2 mb-0">Difficoltà:</label>
                 <select id="difficulty" class="form-select me-2">
-                    <option value="1">Easy</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Hard</option>
+                    <option value="1">Facile</option>
+                    <option value="2">Medio</option>
+                    <option value="3">Difficile</option>
                 </select>
                 <button id="play" class="btn btn-primary">Play</button>
             </div>
@@ -27,7 +30,7 @@
     </header>
 
     <main class="container my-4">
-        <div id="grid" class="d-grid gap-1"></div>
+        <div id="grid" class="d-grid gap-1 mx-auto"></div>
     </main>
 
     <footer class="text-start bg-white py-3">
