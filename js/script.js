@@ -4,6 +4,7 @@ document.getElementById('play').addEventListener('click', function() {
 
     let size;
     const difficulty = document.getElementById('difficulty').value;
+    let score = 0; // Variabile punteggio
 
     if (difficulty == '1') {
         size = 10; // Griglia 10x10
@@ -19,9 +20,13 @@ document.getElementById('play').addEventListener('click', function() {
         const cell = document.createElement('div');
         cell.classList.add('cell');
         cell.innerText = i;
+       
         cell.addEventListener('click', function() {
-            this.classList.add('clicked');
-            console.log(`Cell clicked: ${i}`);
+            if (!this.classList.contains('clicked')) { // Evita il doppio click
+                this.classList.add('clicked');
+                score++;
+                console.log(`Cell clicked: ${i}, Score: ${score}`);
+            }
         });
         grid.appendChild(cell);
     }
