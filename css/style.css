@@ -1,0 +1,26 @@
+body {
+    background-color: #71dfbe; 
+}
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+#grid {
+    background-color: #71dfbe;    
+}
+
+#grid .cell {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #71dfbe;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#grid .cell.clicked {
+    background-color: blue;
+}
